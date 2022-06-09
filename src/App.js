@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-     <h1>Gemechis Shiferaw Linkedin</h1>
+     <h1>Gemechis Shiferaw Linkedin clone</h1>
     </div>
   );
 }
