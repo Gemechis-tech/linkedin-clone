@@ -25,7 +25,7 @@ function Feed() {
                 </div>
             </div>
 
-            <Post name='Gemechis Shiferaw' description='This is a test' />
+            <Post name='Gemechis Shiferaw' description='This is a test' message='I Like Burger'/>
         </div>
     )
 }
