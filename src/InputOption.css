@@ -5,8 +5,13 @@
     color: gray;
     padding: 10px;
     cursor: pointer;
+    
 }
 
 .InputOption > h4 {
     margin-left: 5px;
+}
+
+.post_buttons {
+    display: flex;
 }
