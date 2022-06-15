@@ -7,14 +7,14 @@ import ChatIcon from '@mui/icons-material/Chat';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
 
-function Post({name, desciption, message, photoUrl}) {
+function Post({name, description, message, photoUrl}) {
   return (
     <div className='post'>
         <div className='post__header'>
             <Avatar />
             <div className='post__info'>
                 <h4>{name}</h4>
-                <p>{desciption}</p>
+                <p>{description}</p>
             </div>
         </div>
 
