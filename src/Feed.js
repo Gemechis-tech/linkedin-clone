@@ -33,8 +33,8 @@ function Feed() {
             name: 'Gemechis Shiferaw',
             description: 'Test g',
             message: input,
-            photoUrl: '',
-            timestamp: firebase.firestone.FieldVaule.ServerTimestamp(),
+            photoUrl: "",
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
     };
     return (
@@ -43,7 +43,7 @@ function Feed() {
                 <div className='feed__input'>
                     <CreateIcon />
                     <form>
-                        <input  type='text' />
+                        <input value={input} onChange={e => setInput (e.target.value)} type='text' />
                         <button onClick={sendPost} type="submit">Send</button>
                     </form>
                 </div>
@@ -55,10 +55,15 @@ function Feed() {
                 </div>
             </div>
 
-            {posts.map((post) => (
-                <Post />
+    {posts.map(({id, data: {name, description, message, photoUrl}}) => (
+                <Post
+                key = {id}
+                name={name}
+                description={description}
+                message={message}
+                photoUrl={photoUrl}
+                />
             ))}
-            <Post name='Gemechis Shiferaw' description='This is a test' message='I Like Burger' />
         </div>
     )
 }
